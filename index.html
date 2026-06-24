@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Finance Tracker</title>
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Theme Button -->
+    <button onclick="toggleTheme()"> Toggle Theme</button>
+
+    <h1>Personal Finance Tracker</h1>
+
+    <!-- Dashboard -->
+    <h2>Dashboard</h2>
+
+    <div class="dashboard">
+        <h3>Income: Rs. <span id="income">0</span></h3>
+        <h3>Expense: Rs. <span id="expense">0</span></h3>
+        <h3>Balance: Rs. <span id="balance">0</span></h3>
+    </div>
+
+    <hr>
+
+    <!-- Transaction Form -->
+    <input type="text" id="desc" placeholder="Description">
+
+    <input type="number" id="amount" placeholder="Amount">
+
+    <select id="type">
+        <option value="income">Income</option>
+        <option value="expense">Expense</option>
+    </select>
+
+    <select id="category">
+        <option value="Salary">Salary</option>
+        <option value="Food">Food</option>
+        <option value="Rent">Rent</option>
+        <option value="Transport">Transport</option>
+    </select>
+
+    <button onclick="addTransaction()">Add Transaction</button>
+
+    <hr>
+
+    <!-- Filter -->
+    <h2>Transactions</h2>
+
+    <select id="filter" onchange="render()">
+        <option value="all">All Transactions</option>
+        <option value="income">Income Only</option>
+        <option value="expense">Expense Only</option>
+    </select>
+
+    <!-- Transaction List -->
+    <ul id="list"></ul>
+
+    <hr>
+
+    <!-- Analytics -->
+    <h2>Analytics</h2>
+
+    <h3>Expense by Category</h3>
+    <canvas id="pieChart"></canvas>
+
+    <h3>Monthly Income vs Expense</h3>
+    <canvas id="barChart"></canvas>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+</html>

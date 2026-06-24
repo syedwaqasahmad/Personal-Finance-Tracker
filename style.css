@@ -1,0 +1,162 @@
+/* =========================
+   GLOBAL STYLES
+========================= */
+body {
+  font-family: Arial, sans-serif;
+  background: #2e1d91;
+  margin: 0;
+  padding: 20px;
+  transition: 0.3s;
+}
+
+h1,
+h2 {
+  text-align: center;
+}
+
+/* =========================
+   DASHBOARD
+========================= */
+.dashboard {
+  display: flex;
+  justify-content: space-around;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+.dashboard h3 {
+  background: rgb(189, 116, 116);
+  padding: 15px;
+  border-radius: 10px;
+  width: 250px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* =========================
+   FORM SECTION
+========================= */
+input,
+select,
+button {
+  padding: 10px;
+  margin: 5px;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+input,
+select {
+  width: 200px;
+  border: 1px solid #ccc;
+}
+
+button {
+  border: none;
+  background: #4caf50;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #45a049;
+}
+
+/* =========================
+   TRANSACTION LIST
+========================= */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background: white;
+  margin: 10px 0;
+  padding: 12px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+li button {
+  background: #dbdd4a;
+}
+
+li button:hover {
+  background: #c0392b;
+}
+
+/* =========================
+   CHARTS
+========================= */
+canvas {
+  max-width: 600px;
+  margin: 20px auto;
+  display: block;
+}
+
+/* =========================
+   DARK MODE
+========================= */
+.dark {
+  background: #121212;
+  color: white;
+}
+
+.dark .dashboard h3,
+.dark li {
+  background: #1e1e1e;
+  color: white;
+}
+
+.dark input,
+.dark select {
+  background: #2c2c2c;
+  color: white;
+  border: 1px solid #555;
+}
+
+.dark button {
+  background: #2196f3;
+}
+
+.dark button:hover {
+  background: #1976d2;
+}
+
+.dark hr {
+  border-color: #444;
+}
+
+.dark canvas {
+  background: white;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+@media (max-width: 768px) {
+  .dashboard {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .dashboard h3 {
+    width: 90%;
+  }
+
+  input,
+  select,
+  button {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
